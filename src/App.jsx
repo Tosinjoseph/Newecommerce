@@ -1,15 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import Home from './Pages/Home.jsx'
+import { useState } from 'react'
+import Subhero from './Components/Subhero.jsx'
+import Arrival from './Components/Arrival.jsx'
+
+let heroData=[
+  {text1: 'Sale 20% Off', text2:'On Everything' , text3:'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.'},
+  {text1: 'Sale 30% Off', text2: 'On All Sales', text3:'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.'},
+  {text1: 'Sale 50% Off', text2: 'On All Purchases', text3:'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.'}
+  
+]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const[changeHero, setChangeHero]= useState(0)
 
   return (
-    <>
-      <div className='bg-amber-400'>a</div>
-    </>
+    <Router>
+      
+      <Routes>
+        <Route path='/' element={<>
+        <Home heroData={heroData[changeHero]} setChangeHero={setChangeHero} changeHero={changeHero}/>
+        <Subhero/>
+        <Arrival/>
+        </>}/>
+        
+      </Routes>
+    </Router>
+
+    
   )
 }
 

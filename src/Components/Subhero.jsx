@@ -1,0 +1,30 @@
+import React from 'react'
+
+const Subhero = () => {
+  return (
+    <div className='px-6 md:px-25 lg:px-30 mx-auto items-center justify-center py-10'>
+        <h1 className='font-bold text-5xl pt-3 text-center'>Why Shop With Us?</h1>
+        <div className='flex justify-center items-center mx-auto w-20 h-1 mt-3 bg-red-500'></div>
+        
+        <div className='w-full   flex-column md:flex lg:flex-row gap-6  pt-17'>
+            <div className=' rounded w-full md:w-1/3 mb-4  px-6 py-12 bg-[#002c3e]'>
+            <img src="" alt="" className=' justify-center items-center mx-auto bg-white w-10 h-10 rounded-full' ></img>
+            <h3 className='font-bold text-2xl text-center text-white mt-3'>Fast Delivery</h3>
+            <p className='text-white text-lg text-center mt-1.5'>variations of passages of Lorem Ipsum available</p>
+            </div>
+            <div  className='rounded w-full md:w-1/3 px-6 mb-4  py-10 bg-[#002c3e]'>
+            <img src="" alt="" className=' justify-center items-center mx-auto bg-white w-10 h-10 rounded' ></img>
+            <h3  className='font-bold text-2xl text-center text-white mt-3'>Free Shiping</h3>
+            <p className='text-white text-lg text-center mt-1.5'>variations of passages of Lorem Ipsum reuseable</p>
+            </div>
+            <div  className='rounded w-full md:w-1/3 px-6 mb-4 py-10 bg-[#002c3e]'>
+            <img src="" alt="" className=' justify-center items-center mx-auto bg-white w-10 h-10 rounded-full' ></img>
+            <h3  className='font-bold text-2xl text-center text-white mt-3'>Best Quality</h3>
+            <p className='text-white text-lg text-center mt-1.5'>variations of passages of Lorem Ipsum reutilized</p>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Subhero
