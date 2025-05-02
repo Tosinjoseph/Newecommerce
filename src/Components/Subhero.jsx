@@ -2,7 +2,7 @@ import React from 'react'
 
 const Subhero = () => {
   return (
-    <div className='px-6 md:px-25 lg:px-30 mx-auto items-center justify-center py-10'>
+    <div className='px-6 font-lora md:px-25 lg:px-30 mx-auto items-center justify-center py-10'>
         <h1 className='font-bold text-5xl pt-3 text-center'>Why Shop With Us?</h1>
         <div className='flex justify-center items-center mx-auto w-20 h-1 mt-3 bg-red-500'></div>
         
