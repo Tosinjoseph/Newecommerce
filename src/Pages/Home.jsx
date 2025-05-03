@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from '../Components/Navbar.jsx'
+
+
 
 const Home = ({setChangeHero,heroData,changeHero}) => {
   return (
     <div className='relative min-h-screen bg-center bg-cover font-lora   items-center mx-auto' style={{backgroundImage:"url('./slider-bg.jpg')"}}>
-    <Navbar/>
+    
+    
      <div className='px-4 w-3/5 py-35 md:px-25 lg:px-30'>
       <h1 className='text-6xl mb-2 font-bold text-red-400'>{heroData.text1}</h1>
       <h1 className='text-6xl font-bold text-gray-800'>{heroData.text2}</h1>

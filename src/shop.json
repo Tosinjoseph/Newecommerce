@@ -1,0 +1,64 @@
+[
+    {
+        "name": "Men's Shirt",
+        "price": "$65",
+        "image": "/p1.png"
+    },
+    {
+        "name": "Men's Shirt",
+        "price": "$50",
+        "image": "/p2.png"   
+    },
+    {
+        "name": "Women's Dress",
+        "price": "$55",
+        "image": "/p3.png"   
+    },
+    {
+        "name": "Women's Dress",
+        "price": "$65",
+        "image": "/p4.png"   
+    },
+    {
+        "name": "Women's Dress",
+        "price": "$60",
+        "image": "/p5.png"   
+    },
+    {
+        "name": "Women's Dress",
+        "price": "$40",
+        "image": "/p6.png"   
+    },
+    {
+        "name": "Women's Dress",
+        "price": "$40",
+        "image": "/p7.png"   
+    },
+    {
+        "name": "Men's Shirt",
+        "price": "$65",
+        "image": "/p8.png"   
+    },
+    {
+        "name": "Men's Shirt",
+        "price": "$70",
+        "image": "/p9.png"   
+    },
+    {
+        "name": "Men's Shirt",
+        "price": "$55",
+        "image": "/p10.png"   
+    },
+    {
+        "name": "Men's Shirt",
+        "price": "30.99",
+        "image": "/p11.png"   
+    },
+    {
+        "name": "Men T-shirt",
+        "price": "$50",
+        "image": "/p12.png"   
+    }
+    
+    
+]
