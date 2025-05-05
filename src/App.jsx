@@ -10,6 +10,9 @@ import Navbar from './Components/Navbar.jsx'
 import Superbar from './Components/Superbar.jsx'
 import Stores from './Components/Stores.jsx'
 import Subscribe from './Components/Subscribe.jsx'
+import Testimonials from './Components/Testimonials.jsx'
+import Footer from './Components/Footer.jsx'
+import Product from './Pages/product.jsx'
 
 
 let heroData=[
@@ -34,6 +37,12 @@ function App() {
         <Arrival/>
         <Stores/>
         <Subscribe/>
+        <Testimonials/>
+        <Footer/>
+        </>}/>
+        <Route path='/product' element={<>
+        <Navbar/>
+        <Product/>
         </>}/>
         
       </Routes>

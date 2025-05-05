@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Navbar = ({setShowSuperbar, showSuperbar}) => {
+   const Navigate = useNavigate();
   return (
     
     <div className='flex justify-between font-lora bg-white py-6 gap-6 items-center px-4 md:px-30 lg:px-35'>
@@ -11,9 +13,9 @@ const Navbar = ({setShowSuperbar, showSuperbar}) => {
         
         <div className='relative lg:flex gap-10 hidden font-bold'>
     
-          <a className='hover:text-red-400 transition ease-in-out duration-500' href="">HOME</a>
+          <a onClick={()=>Navigate('/')} className='hover:text-red-400 transition ease-in-out duration-500' href="">HOME</a>
           <a className='hover:text-red-400 transition ease-in-out duration-500' href="">PAGES</a>
-          <a className='hover:text-red-400 transition ease-in-out duration-500' href="">PRODUCTS</a>
+         <Link to='/product'> <a className='hover:text-red-400 transition ease-in-out duration-500' href="">PRODUCTS</a></Link>
           <a className='hover:text-red-400 transition ease-in-out duration-500' href="">BLOG</a>
           <a className='hover:text-red-400 transition ease-in-out duration-500' href="">CONTACT</a>
           <img className='object-contain w-5 filter-invert brightness-0' src="./search-icon.png" alt="" />

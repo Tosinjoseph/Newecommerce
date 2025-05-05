@@ -1,0 +1,14 @@
+[
+    {
+        "image": "./client.jpg",
+        "name": "Anna Meade",
+        "id": "Customer",
+        "words": "Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat."
+    },
+    {
+        "image": "./client.jpg",
+        "name": "Anna Meade 2",
+        "id": "Customer",
+        "words": "Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat."   
+    }
+]
