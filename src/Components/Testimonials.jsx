@@ -2,6 +2,7 @@ import React from 'react'
 import { Swiper,useSwiper,SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import testdata from '../Slider.json'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 const Testimonials = () => {
   return (
@@ -27,7 +28,8 @@ const Testimonials = () => {
         >
          {
           testdata.map((item, i)=>(
-         <SwiperSlide key={i} className='justify-center text-center items-center mx-auto'>
+         <SwiperSlide key={i} className='relative justify-center text-center items-center mx-auto'>
+          <SliderButton/>
           <div>
             
             <img className='w-38 mt-8 border border-transparent flex mx-auto rounded-full overflow-hidden' src={item.image} alt="" />
@@ -45,3 +47,14 @@ const Testimonials = () => {
 }
 
 export default Testimonials
+
+const SliderButton=()=>{
+  const swiper= useSwiper()
+  return(
+   <div className='px-4 absolute top-80 md:top-40   w-full md:px-50 lg:px-55 mx-auto flex  items-center'>
+    <div onClick={()=>swiper.slidePrev()} className='p-3 cursor-pointer absolute left-15  md:left-80 hover:bg-black   bg-red-400 rounded-full'><FaArrowLeft  className='text-white '/></div>
+    <div onClick={()=>swiper.slideNext()} className='p-3 cursor-pointer  absolute right-15 md:right-80 hover:bg-black  bg-red-400 rounded-full'><FaArrowRight  className='text-white '/></div>
+    
+   </div>
+  )
+}

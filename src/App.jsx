@@ -16,6 +16,7 @@ import Product from './Pages/product.jsx'
 import Footersecond from './Components/Footersecond.jsx'
 import Blog from './Pages/Blog.jsx'
 import Contact from './Pages/Contact.jsx'
+import Testimonialpage from './Pages/Testimonialpage.jsx'
 
 
 let heroData=[
@@ -62,6 +63,12 @@ function App() {
         <Contact/>
         <Arrival/>
         <Footersecond/>
+        </>}/>
+        <Route path='/testimonial' element={<>
+         <Navbar/>
+         <Testimonialpage/>
+         <Testimonials/>
+         <Footersecond/>
         </>}/>
       </Routes>
     </Router>
