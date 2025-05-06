@@ -13,6 +13,9 @@ import Subscribe from './Components/Subscribe.jsx'
 import Testimonials from './Components/Testimonials.jsx'
 import Footer from './Components/Footer.jsx'
 import Product from './Pages/product.jsx'
+import Footersecond from './Components/Footersecond.jsx'
+import Blog from './Pages/Blog.jsx'
+import Contact from './Pages/Contact.jsx'
 
 
 let heroData=[
@@ -40,11 +43,26 @@ function App() {
         <Testimonials/>
         <Footer/>
         </>}/>
+
         <Route path='/product' element={<>
         <Navbar/>
         <Product/>
+        <Footersecond/>
         </>}/>
         
+        <Route path='/blog' element={<>
+        <Navbar/>
+        <Blog/>
+        <Subhero/>
+        <Footersecond/>
+        </>}/>
+
+        <Route path='/contact' element={<>
+        <Navbar/>
+        <Contact/>
+        <Arrival/>
+        <Footersecond/>
+        </>}/>
       </Routes>
     </Router>
 

@@ -16,8 +16,8 @@ const Navbar = ({setShowSuperbar, showSuperbar}) => {
           <a onClick={()=>Navigate('/')} className='hover:text-red-400 transition ease-in-out duration-500' href="">HOME</a>
           <a className='hover:text-red-400 transition ease-in-out duration-500' href="">PAGES</a>
          <Link to='/product'> <a className='hover:text-red-400 transition ease-in-out duration-500' href="">PRODUCTS</a></Link>
-          <a className='hover:text-red-400 transition ease-in-out duration-500' href="">BLOG</a>
-          <a className='hover:text-red-400 transition ease-in-out duration-500' href="">CONTACT</a>
+         <Link to='/blog'><a className='hover:text-red-400 transition ease-in-out duration-500' href="">BLOG</a></Link>
+          <Link to='/contact'><a className='hover:text-red-400 transition ease-in-out duration-500' href="">CONTACT</a></Link>
           <img className='object-contain w-5 filter-invert brightness-0' src="./search-icon.png" alt="" />
           <img className='object-contain w-5 filter-invert brightness-0' src="./user-icon.png" alt="" />
           

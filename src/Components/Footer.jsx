@@ -47,7 +47,7 @@ const Footer = () => {
      </div>
      <div className='text-center text-lg text-white py-4 bg-black mt-25 pb-6'>
         <p>© 2021 All Rights Reserved By<span className='text-red-400 ml-1'>Free Html Templates</span> </p>
-        <p>Distributed By<span className='text-red-400 ml-1'>ThemeWagon</span> </p>
+        <p>Coded By<span className='text-red-400 ml-1'>Tosin Joseph</span> </p>
      </div>
     </div>
   )

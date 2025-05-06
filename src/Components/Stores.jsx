@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setProducts } from '../Redux/ProductSlice'
 import data from '../shop.json'
+import { useNavigate } from 'react-router-dom'
 
 
 const Stores = () => {
   const products = useSelector(state=> state.product.products)
   const dispatch = useDispatch();
+  const Navigate = useNavigate()
   useEffect(()=>{
   dispatch(setProducts(data))
   },[])
@@ -21,7 +23,7 @@ const Stores = () => {
 
         <div className='grid w-full relative pt-6 px-4 gap-3 md:px-25 lg:px-30 overflow-hidden container justify-center items-center mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {
-          products.map(((products)=>(
+          products.slice(0,9).map(((products)=>(
             <div className='border-b-2 shadow-lg border-gray-100 pr-2 pb-2 border-r-2'>
             <div key={products.id} className='w-full relative group p-6 brightness-100  bg-gray-100 h-80'>
               <img className=' flex justify-center mx-auto w-30 h-50 object-contain' src={products.image} alt="" />
@@ -40,7 +42,7 @@ const Stores = () => {
         
         </div>
         <div className='flex w-full py-8 mx-auto text-center items-center justify-center'>
-          <button className='bg-red-400 cursor-pointer border hover:text-red-400 border-red-400 hover:bg-transparent text-white py-4 px-12'>View More Products</button>
+          <button onClick={()=>Navigate('/product')} className='bg-red-400 cursor-pointer border hover:text-red-400 border-red-400 hover:bg-transparent text-white py-4 px-12'>View More Products</button>
         </div> 
     </div>
   )
