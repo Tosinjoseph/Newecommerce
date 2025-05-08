@@ -1,62 +1,74 @@
-[
+ [
     {
+        "id": "1",
         "name": "Men's Shirt",
-        "price": "$65",
+        "price": "65",
         "image": "/p1.png"
     },
     {
+        "id": "2",
         "name": "Men's Shirt",
-        "price": "$50",
+        "price": "50",
         "image": "/p2.png"   
     },
     {
+        "id": "3",
         "name": "Women's Dress",
-        "price": "$55",
+        "price": "55",
         "image": "/p3.png"   
     },
     {
+        "id": "4",
         "name": "Women's Dress",
-        "price": "$65",
+        "price": "65",
         "image": "/p4.png"   
     },
     {
+        "id": "5",
         "name": "Women's Dress",
-        "price": "$60",
+        "price": "60",
         "image": "/p5.png"   
     },
     {
+        "id": "6",
         "name": "Women's Dress",
-        "price": "$40",
+        "price": "40",
         "image": "/p6.png"   
     },
     {
+        "id": "7",
         "name": "Women's Dress",
-        "price": "$40",
+        "price": "40",
         "image": "/p7.png"   
     },
     {
+        "id": "8",
         "name": "Men's Shirt",
         "price": "$65",
         "image": "/p8.png"   
     },
     {
+        "id": "9",
         "name": "Men's Shirt",
-        "price": "$70",
+        "price": "70",
         "image": "/p9.png"   
     },
     {
+        "id": "10",
         "name": "Men's Shirt",
-        "price": "$55",
+        "price": "55",
         "image": "/p10.png"   
     },
     {
+        "id": "11",
         "name": "Men's Shirt",
         "price": "30.99",
         "image": "/p11.png"   
     },
     {
+        "id": "12",
         "name": "Men T-shirt",
-        "price": "$50",
+        "price": "50",
         "image": "/p12.png"   
     }
     

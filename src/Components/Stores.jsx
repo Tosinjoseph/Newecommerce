@@ -13,12 +13,12 @@ const Stores = () => {
   const Navigate = useNavigate()
 
   const handleAddToCart =(e, product)=>{
-    e.stopPropagation()
-    e.preventDefault()
-    dispatch(addToCart(product))
-    alert('Product Added Succesfully')
-  }
-
+          e.stopPropagation()
+          e.preventDefault()
+          dispatch(addToCart(product))
+          alert('Product Added Succesfully')
+        }
+  
   useEffect(()=>{
   dispatch(setProducts(data))
   },[])
@@ -34,15 +34,15 @@ const Stores = () => {
         <div className='grid w-full relative pt-6 px-4 gap-3 md:px-25 lg:px-30 overflow-hidden container justify-center items-center mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {
           products.slice(0,9).map(((products)=>(
-            <div className='border-b-2 shadow-lg border-gray-100 pr-2 pb-2 border-r-2'>
-            <div key={products.id} className='w-full relative group p-6 brightness-100  bg-gray-100 h-80'>
+            <div key={products.id} className='border-b-2 shadow-lg border-gray-100 pr-2 pb-2 border-r-2'>
+            <div  className='w-full relative group p-6 brightness-100  bg-gray-100 h-80'>
               <img className=' flex justify-center mx-auto w-30 h-50 object-contain' src={products.image} alt="" />
               <div className='flex justify-between pt-6 font-bold'>
                 <h3>{products.name}</h3>
-              <h3>{products.price}</h3>
+              <h3>${products.price}</h3>
               </div>
               <div className='absolute inset-0 hidden bg-white/50 group-hover:block'></div>
-              <button onClick={(e)=>handleAddToCart(e, products)} className='bg-red-400 whitespace-nowrap border hover:bg-transparent cursor-pointer hover:text-red-400 border-red-400 hidden group-hover:block top-32 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute text-white font-extralight px-8 py-2 rounded-full'>Add to Cart</button>
+              <button  onClick={(e)=>handleAddToCart(e, products)}   className='bg-red-400 whitespace-nowrap border hover:bg-transparent cursor-pointer hover:text-red-400 border-red-400 hidden group-hover:block top-32 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute text-white font-extralight px-8 py-2 rounded-full'>Add to Cart</button>
               <button className='bg-black whitespace-nowrap border border-black cursor-pointer   hidden group-hover:block hover:bg-transparent top-45 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute text-white font-extralight px-10 py-2 rounded-full'>Buy Now</button>
               
             </div>
