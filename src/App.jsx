@@ -72,6 +72,7 @@ function App() {
          <Footersecond/>
         </>}/>
         <Route path='/cart' element={<>
+        <Navbar/>
         <Cart/>
         </>}/>
       </Routes>

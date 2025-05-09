@@ -29,8 +29,8 @@ const Navbar = ({setShowSuperbar, showSuperbar}) => {
           <Link to='/contact'><a className='hover:text-red-400 transition ease-in-out duration-500' href="">CONTACT</a></Link>
         
           <FaSearch className='mt-1'/>
-          <Link to='/cart' ><FaShoppingCart className='mt-1 relative cursor pointer'/></Link>
-          <span className='text-white absolute text-sm right-0.5 top-1.5 w-4 h-4 text-center rounded-full bg-red-400 '>{products.length > 0? products.length : <></>}</span>
+          <Link to='/cart' ><FaShoppingCart className='mt-1 relative cursor pointer'/>
+          <span className='text-white absolute text-sm right-0.5 top-1.5 w-4 h-4 text-center rounded-full bg-red-400 '>{products.length > 0? products.length : <></>}</span></Link>
         </div>
       {showSuperbar? <><img onClick={()=>Navigate('/')} onClick={()=>setShowSuperbar(false)} className='absolute z-100 block lg:hidden cursor-pointer filter-invert brightness-0 w-7 right-12' src="./cross_icon.svg" alt="" /></> : <> <img onClick={()=>setShowSuperbar(true)} src="./toggle-icon.png" className='absolute block lg:hidden cursor-pointer filter-invert brightness-0 w-7 right-12' alt="" /></>   }
         
