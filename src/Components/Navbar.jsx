@@ -24,7 +24,7 @@ const Navbar = ({setShowSuperbar, showSuperbar}) => {
             <Link to='/testimonial'><p className='hover:text-red-400 cursor-pointer'>Testimonial</p></Link>
           </div>
           </div>
-         <Link to='/product'> <a className='hover:text-red-400 transition ease-in-out duration-500' href="">PRODUCTS</a></Link>
+         <Link to='/product' onClick={()=>Navigate('/product')} ><a className='hover:text-red-400 transition ease-in-out duration-500' href="">PRODUCTS</a></Link>
          <Link to='/blog'><a className='hover:text-red-400 transition ease-in-out duration-500' href="">BLOG</a></Link>
           <Link to='/contact'><a className='hover:text-red-400 transition ease-in-out duration-500' href="">CONTACT</a></Link>
         

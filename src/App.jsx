@@ -18,6 +18,7 @@ import Blog from './Pages/Blog.jsx'
 import Contact from './Pages/Contact.jsx'
 import Testimonialpage from './Pages/Testimonialpage.jsx'
 import Cart from './Pages/Cart.jsx'
+import LoginSignup from './Components/LoginSignup.jsx'
 
 
 let heroData=[
@@ -30,6 +31,7 @@ let heroData=[
 function App() {
   const[changeHero, setChangeHero]= useState(0)
   const[showSuperbar, setShowSuperbar]= useState(false)
+  const[showAddress, setShowAddress] = useState(false)
 
   return (
     <Router>
@@ -73,7 +75,8 @@ function App() {
         </>}/>
         <Route path='/cart' element={<>
         <Navbar/>
-        <Cart/>
+        <Cart setShowAddress={setShowAddress} showAddress={showAddress}/>
+        <LoginSignup setShowAddress={setShowAddress} showAddress={showAddress}/>
         </>}/>
       </Routes>
     </Router>
