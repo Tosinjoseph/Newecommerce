@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const Home = ({setChangeHero,heroData,changeHero}) => {
+const Home = ({setChangeHero,heroData, changeHero}) => {
   return (
     <div className='relative min-h-screen bg-center bg-cover font-lora   items-center mx-auto' style={{backgroundImage:"url('./slider-bg.jpg')"}}>
     

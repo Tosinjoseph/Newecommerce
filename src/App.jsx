@@ -18,6 +18,7 @@ import Blog from './Pages/Blog.jsx'
 import Contact from './Pages/Contact.jsx'
 import Testimonialpage from './Pages/Testimonialpage.jsx'
 import Cart from './Pages/Cart.jsx'
+import Address from './Components/Address.jsx'
 import LoginSignup from './Components/LoginSignup.jsx'
 
 
@@ -32,12 +33,14 @@ function App() {
   const[changeHero, setChangeHero]= useState(0)
   const[showSuperbar, setShowSuperbar]= useState(false)
   const[showAddress, setShowAddress] = useState(false)
+  const[address, setAddress] = useState('Okeola powerline')
+  const[loginShow, setLoginShow] = useState(false)
 
   return (
     <Router>
       
       <Routes>
-        <Route path='/' element={<><Navbar showSuperbar={showSuperbar} setShowSuperbar={setShowSuperbar}/>
+        <Route path='/' element={<><Navbar  loginShow={loginShow} setLoginShow={setLoginShow} showSuperbar={showSuperbar} setShowSuperbar={setShowSuperbar}/>
         <Superbar showSuperbar={showSuperbar} setShowSuperbar={setShowSuperbar}/>
         <Home heroData={heroData[changeHero]} setChangeHero={setChangeHero} changeHero={changeHero}/>
         <Subhero/>
@@ -49,7 +52,7 @@ function App() {
         </>}/>
 
         <Route path='/product' element={<>
-        <Navbar/>
+        <Navbar  loginShow={loginShow} setLoginShow={setLoginShow}/>
         <Product/>
         <Footersecond/>
         </>}/>
@@ -74,11 +77,13 @@ function App() {
          <Footersecond/>
         </>}/>
         <Route path='/cart' element={<>
-        <Navbar/>
-        <Cart setShowAddress={setShowAddress} showAddress={showAddress}/>
-        <LoginSignup setShowAddress={setShowAddress} showAddress={showAddress}/>
+        <Navbar loginShow={loginShow} setLoginShow={setLoginShow}/>
+        <Cart address={address} setAddress={setAddress} setShowAddress={setShowAddress} showAddress={showAddress}/>
+        <Address address={address} setAddress={setAddress} setShowAddress={setShowAddress} showAddress={showAddress}/>
+        
         </>}/>
       </Routes>
+      <LoginSignup loginShow={loginShow} setLoginShow={setLoginShow}/>
     </Router>
 
     

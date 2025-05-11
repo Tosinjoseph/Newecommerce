@@ -3,9 +3,9 @@ import { FaTrash } from 'react-icons/fa';
 import { FaDeleteLeft } from 'react-icons/fa6';
 import { useSelector } from 'react-redux'
 
-const Cart = ({showAddress,setShowAddress}) => {
+const Cart = ({showAddress,address,setAddress,loginShow,setShowAddress}) => {
   const cart = useSelector(state=> state.cart);
-  const[address, setAddress] = useState('Okeola powerline')
+  
   return (
     <div className='font-lora flex-col relative md:flex-row lg:flex space-x-3 px-4 md:px-20 lg:px-25'>
       <div className='w-[70%]'>
@@ -55,14 +55,14 @@ const Cart = ({showAddress,setShowAddress}) => {
         <p className='px-4'>Shipping:</p>
         <p className='ml-5 text-xs'>shipping to</p>
         <div className='flex-col md:flex-row lg:flex mx-4  space-x-1 pt-3 pb-4 border-b'>
-          <p className='text-xs font-bold'>{address}</p>
+          <p value={address} className='text-xs font-bold'>{address}</p>
           <button onClick={()=>setShowAddress(true)} className='text-sm text-red-400 cursor-pointer float-right'>Change Address</button>
         </div>
         <div className='flex  px-4 justify-between text-sm mt-4'>
           <p>Total price</p>
           <p>{cart.totalPrice}</p>
         </div>
-        <button className='w-[85%] flex mx-auto justify-center mt-6 py-1 cursor-pointer text-white bg-red-500'>Proceed to checkout</button>
+        <button onClick={()=>setLoginShow(true)} className='w-[85%] flex mx-auto justify-center mt-6 py-1 cursor-pointer text-white bg-red-500'>Proceed to checkout</button>
       </div>
      </div> 
   )
