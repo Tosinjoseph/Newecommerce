@@ -100,8 +100,8 @@ const Checkout = () => {
                 <div className='pt-2'>
                   <img className='object-contain w-8' src={products.image} alt="image" />
                   <div>
-                    <p>Product {products.id}</p>
-                    <p>${products.price}</p>
+                    <p className='font-bold'>Product {products.id}</p>
+                    <p>${products.price} X {products.quantity}</p>
                   </div>
                 </div>
                 
