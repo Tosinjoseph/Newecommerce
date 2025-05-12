@@ -20,6 +20,7 @@ import Testimonialpage from './Pages/Testimonialpage.jsx'
 import Cart from './Pages/Cart.jsx'
 import Address from './Components/Address.jsx'
 import LoginSignup from './Components/LoginSignup.jsx'
+import Checkout from './Pages/Checkout.jsx'
 
 
 let heroData=[
@@ -81,6 +82,11 @@ function App() {
         <Cart address={address} setAddress={setAddress} setShowAddress={setShowAddress} showAddress={showAddress}/>
         <Address address={address} setAddress={setAddress} setShowAddress={setShowAddress} showAddress={showAddress}/>
         
+        </>}/>
+        <Route path='/checkout' element={<>
+        <Navbar/>
+        <Checkout/>
+        <Footersecond/>
         </>}/>
       </Routes>
       <LoginSignup loginShow={loginShow} setLoginShow={setLoginShow}/>

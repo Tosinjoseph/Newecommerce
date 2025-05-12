@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { FaTrash } from 'react-icons/fa';
 import { FaDeleteLeft } from 'react-icons/fa6';
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 
-const Cart = ({showAddress,address,setAddress,loginShow,setShowAddress}) => {
+const Cart = ({address,setShowAddress}) => {
   const cart = useSelector(state=> state.cart);
   
   return (
@@ -62,7 +63,7 @@ const Cart = ({showAddress,address,setAddress,loginShow,setShowAddress}) => {
           <p>Total price</p>
           <p>{cart.totalPrice}</p>
         </div>
-        <button onClick={()=>setLoginShow(true)} className='w-[85%] flex mx-auto justify-center mt-6 py-1 cursor-pointer text-white bg-red-500'>Proceed to checkout</button>
+        <Link to='/checkout'><button className='w-[85%] flex mx-auto justify-center mt-6 py-1 cursor-pointer text-white bg-red-500'>Proceed to checkout</button></Link>
       </div>
      </div> 
   )
