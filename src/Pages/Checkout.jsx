@@ -97,12 +97,22 @@ const Checkout = () => {
           {
             cart.products.map(((products)=>(
               <div key={products.id}>
-                <div className='pt-2'>
+                <div className='pt-2 flex justify-between border-b pb-4'>
                   <img className='object-contain w-8' src={products.image} alt="image" />
-                  <div>
+                  <div className=''>
                     <p className='font-bold'>Product {products.id}</p>
-                    <p>${products.price} X {products.quantity}</p>
+                    <p>${products.price} X {products.quantity}</p> 
                   </div>
+                  <div className=''>
+                    <p className=' '>${products.price * products.quantity}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className='flex text-sm justify-between py-4'>
+                    <p >Total Price:</p>
+                    <p>${cart.totalPrice}</p>
+                  </div>
+                  <button className='flex w-full text-white cursor-pointer rounded-xs mt-2 py-1.5 bg-red-500 mx-auto text-center justify-center'>Place Order Now</button>
                 </div>
                 
               </div>
