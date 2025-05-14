@@ -21,6 +21,7 @@ import Cart from './Pages/Cart.jsx'
 import Address from './Components/Address.jsx'
 import LoginSignup from './Components/LoginSignup.jsx'
 import Checkout from './Pages/Checkout.jsx'
+import Order from './Pages/Order.jsx'
 
 
 let heroData=[
@@ -36,6 +37,7 @@ function App() {
   const[showAddress, setShowAddress] = useState(false)
   const[address, setAddress] = useState('Okeola powerline')
   const[loginShow, setLoginShow] = useState(false)
+  const[order, setOrder] = useState(null)
 
   return (
     <Router>
@@ -85,7 +87,12 @@ function App() {
         </>}/>
         <Route path='/checkout' element={<>
         <Navbar/>
-        <Checkout/>
+        <Checkout order={order} setOrder={setOrder}/>
+        <Footersecond/>
+        </>}/>
+        <Route path='/order' element={<>
+        <Navbar/>
+        <Order order={order} setOrder={setOrder}/>
         <Footersecond/>
         </>}/>
       </Routes>
