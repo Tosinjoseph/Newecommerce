@@ -7,6 +7,10 @@ import { Link, useNavigate } from 'react-router-dom'
 const Navbar = ({setShowSuperbar,loginShow, setLoginShow, showSuperbar}) => {
    const Navigate = useNavigate();
    const products = useSelector(state=> state.cart.products);
+   const handleBar =()=>{
+    setShowSuperbar(false)
+    Navigate('/')
+   }
   return (
      
     <div className='flex justify-between font-lora bg-white py-7 gap-6 items-center px-4 md:px-30 lg:px-35'>
@@ -33,7 +37,7 @@ const Navbar = ({setShowSuperbar,loginShow, setLoginShow, showSuperbar}) => {
           <span className='text-white absolute text-sm right-11.5 top-1.5 w-4 h-4 text-center rounded-full bg-red-400 '>{products.length > 0? products.length : <></>}</span></Link>
           <FaUser onClick={()=>setLoginShow(true)} alt="User" className='object-contain cursor-pointer items-center mt-1'/>
         </div>
-      {showSuperbar? <><img onClick={()=>Navigate('/')} onClick={()=>setShowSuperbar(false)} className='absolute z-100 block lg:hidden cursor-pointer filter-invert brightness-0 w-7 right-12' src="./cross_icon.svg" alt="" /></> : <> <img onClick={()=>setShowSuperbar(true)} src="./toggle-icon.png" className='absolute block lg:hidden cursor-pointer filter-invert brightness-0 w-7 right-12' alt="" /></>   }
+      {showSuperbar? <><img onClick={handleBar} className='absolute z-100 block lg:hidden cursor-pointer filter-invert brightness-0 w-7 right-12' src="./cross_icon.svg" alt="" /></> : <> <img onClick={()=>setShowSuperbar(true)} src="./toggle-icon.png" className='absolute block lg:hidden cursor-pointer filter-invert brightness-0 w-7 right-12' alt="" /></>   }
         
     </div>
     

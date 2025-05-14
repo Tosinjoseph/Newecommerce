@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { FaTrash } from 'react-icons/fa';
 import { FaDeleteLeft } from 'react-icons/fa6';
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
+import { decreaseQuantity, increaseQuantity, removeFromCart } from '../Redux/CartSlice';
 
 const Cart = ({address,setShowAddress}) => {
   const cart = useSelector(state=> state.cart);
+  const dispatch = useDispatch()
   
   return (
     <div className='font-lora flex-col relative md:flex-row lg:flex space-x-3 px-4 md:px-20 lg:px-25'>
@@ -32,12 +34,12 @@ const Cart = ({address,setShowAddress}) => {
                 <p className='flex-1'>Product {products.id}</p>
                 <p>${products.price}</p>
                 <div className='flex'>
-                  <button className='px-1.5 border cursor-pointer'>-</button>
+                  <button onClick={()=>dispatch(decreaseQuantity(products.id))} className='px-1.5 border cursor-pointer'>-</button>
                   <p className='px-2'>{products.quantity}</p>
-                  <button className='px-1.5 border cursor-pointer'>+</button>
+                  <button onClick={()=>dispatch(increaseQuantity(products.id))} className='px-1.5 border cursor-pointer'>+</button>
                 </div>
                 <p>{products.quantity * products.price}</p>
-                <FaTrash className='text-red-600 cursor-pointer'/>
+                <FaTrash onClick={()=>dispatch(removeFromCart(products.id))} className='text-red-600 cursor-pointer'/>
               </div>
              </div>
             </div>
