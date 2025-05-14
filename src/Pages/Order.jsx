@@ -34,7 +34,7 @@ const Order = ({order}) => {
             <p>${cart.totalPrice}</p>
         </div>
         <div className='flex gap-4'>
-            <button className='bg-green-500 cursor-pointer text-white py-1 px-2.5 rounded-xs'>Order Tracking</button>
+            <button className='bg-green-500 hover:bg-green-300 cursor-pointer text-white py-1 px-2.5 rounded-xs'>Order Tracking</button>
             <button onClick={()=>Navigate('/')} className='bg-red-400 hover:bg-red-300 cursor-pointer text-white py-1 px-2.5 rounded-xs'>Continue Shopping</button>
         </div>
      </div>
