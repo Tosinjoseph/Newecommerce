@@ -1,3 +1,4 @@
+import { FaShoppingCart } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 
@@ -10,7 +11,7 @@ const Superbar = ({setShowSuperbar,showSuperbar}) => {
       <Link to='/product'><a className='hover:text-red-400 cursor-pointer transition ease-in-out duration-500' href="">PRODUCTS</a></Link>
       <Link to='/blog'><a className='hover:text-red-400 cursor-pointer transition ease-in-out duration-500' href="">BLOGS</a></Link>
       <Link to='/contact'><a className='hover:text-red-400 cursor-pointer transition ease-in-out duration-500' href="">CONTACT</a></Link>
-      <Link to='/cart'><img className='object-contain w-5 filter-invert brightness-0' src="./search-icon.png" alt="" /></Link>
+      <Link to='/cart'><FaShoppingCart className='object-contain w-5 filter-invert brightness-0' src="./search-icon.png" alt="" /></Link>
       <Link><img className='object-contain w-5 filter-invert brightness-0' src="./user-icon.png" alt="" /></Link>
     
     </div>
