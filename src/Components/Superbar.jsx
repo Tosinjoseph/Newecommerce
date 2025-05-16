@@ -17,7 +17,7 @@ const Superbar = ({setShowSuperbar,showSuperbar}) => {
       <div className="absolute top-80 text-white bg-red-400 w-4 rounded-full h-4">{cart.products.length > 0? cart.products.length : <></>}</div>
       </Link>
       <Link><img className='object-contain w-5 filter-invert brightness-0' src="./user-icon.png" alt="" /></Link>
-    
+    <div></div>
     </div>
   )
 }
